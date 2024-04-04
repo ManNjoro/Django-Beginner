@@ -2,9 +2,4 @@
 {% block title %} Home {% endblock %}
 {% block content %}
 <h1>HomePage</h1>
-<ul>
-    {% for item in ls.item_set.all %}
-    <li>{{ item.id }} - {{ item.name }}</li>
-    {% endfor %}
-</ul>
 {% endblock %}
