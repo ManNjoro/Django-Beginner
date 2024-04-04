@@ -10,4 +10,9 @@ def index(response, id):
     return render(response, "main/list.html", {"ls": ls})
 
 def home(response):
-    return render(response, "main/home.html", {"name": "Test"})
+    ls = ToDoList.objects.all()
+    print("ls: ",ls)
+    return render(response, "main/home.html", {"ls": ls})
+
+def create(response):
+    return render(response, "main/create.html", {})
