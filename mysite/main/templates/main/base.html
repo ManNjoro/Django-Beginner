@@ -17,9 +17,14 @@
         <a href="/2">View</a>
     </div>
     <div id="content",  name="content" class="main">
-
-        {% block content %}
-        {% endblock %}
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 class="mt-2">My Site</h1>
+                <hr class="mt-0 mb-4">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
     </div>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>

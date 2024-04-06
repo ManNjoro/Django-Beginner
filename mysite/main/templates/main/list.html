@@ -4,15 +4,23 @@
 <h1>{{ ls.name }}</h1>
 <form action="#" method="post">
     {% csrf_token %}
-    <ul>
+
         {% for item in ls.item_set.all %}
-        {% if item.complete == True %}
-        <li><input type="checkbox" name="c{{ item.id }}" id="" value="clicked" checked> {{item.text}}</li>
-        {% else %}
-        <li><input type="checkbox" name="c{{ item.id }}" id="" value="clicked">{{item.text}}</li>
-        {% endif %}
-        {% endfor %}
-    </ul>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+
+                    {% if item.complete == True %}
+                    <input type="checkbox" name="c{{ item.id }}" id="" value="clicked" checked>
+                    {% else %}
+                    <input type="checkbox" name="c{{ item.id }}" id="" value="clicked">
+                    {% endif %}
+                </div>
+            </div>
+            <input type="text" , value="{{item.text}}" name="" id="" class="form-control">
+        </div>
+            {% endfor %}
+
     <button name="save", value="save">Save</button>
     <input type="text", name="new" id="">
     <button name="newItem", value="newItem">Add Item</button>
