@@ -21,8 +21,13 @@
         </div>
             {% endfor %}
 
-    <button name="save", value="save">Save</button>
-    <input type="text", name="new" id="">
-    <button name="newItem", value="newItem">Add Item</button>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+
+            <button name="newItem", value="newItem" class="btn btn-success">Add Item</button>
+        </div>
+        <input type="text", name="new" id="">
+    </div>
+    <button name="save", value="save" class="btn btn-success">Save</button>
 </form>
 {% endblock %}
