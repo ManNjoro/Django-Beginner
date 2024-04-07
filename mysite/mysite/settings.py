@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "crispy_forms",
     'main.apps.MainConfig',
     'register.apps.RegisterConfig',
 ]
@@ -121,6 +122,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     (BASE_DIR / 'static')
 ]
+
+CRISPY_TEMPLATE_PACK="bootstrap5"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
